@@ -4,14 +4,14 @@
     {
         static void Main(string[] args)
         {
-            Alumno alumno1 = new Alumno("Maria", 123, 6.5, 8.3);
-            Alumno alumno2 = new Alumno("Juan", 456, 9.7, 8.5);
+            Alumno alumno1 = new Alumno("Maria Perez", 123, 6.5, 8.3);
+            Alumno alumno2 = new Alumno("Juan Gonzalez", 456, 9.7, 8.5);
 
             Console.WriteLine($"Nombre: {alumno1.Nombre} - Legajo: {alumno1.Legajo}");
             Console.WriteLine($"Nombre: {alumno2.Nombre} - Legajo: {alumno2.Legajo}");
 
 
-            alumno1.Nombre = "Ana";
+            alumno1.Nombre = "Ana Fernandez";
             Console.WriteLine($"Nombre: {alumno1.Nombre} - Legajo: {alumno1.Legajo}");
             Console.WriteLine($"Nombre: {alumno2.Nombre} - Legajo: {alumno2.Legajo}");
 
@@ -32,6 +32,9 @@
             alumno2.SubirNota();
             Console.WriteLine($"Promedio de {alumno2.Nombre} después de subir las notas: {alumno2.Promedio()}");
 
+
+            Console.WriteLine(alumno1);
+            Console.WriteLine(alumno2);
         }
     }
 }

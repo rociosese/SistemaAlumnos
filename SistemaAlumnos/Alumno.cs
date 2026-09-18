@@ -35,5 +35,12 @@ namespace SistemaAlumnos
             Nota2 = Math.Min(Nota2 + 1, 10);
         }
 
+        public override string ToString()
+            //Al borrar "override", Alumno.ToString() oculta
+            //el miembro heredado object.ToString()
+        {
+            return $"{Legajo} - {Nombre}, (promedio: {Promedio()})";
+        }
+
     }
 }
