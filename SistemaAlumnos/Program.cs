@@ -21,6 +21,17 @@
             // "No se ha dado ningun argumento que corresponda al parámetro
             // requerido 'nombre' de 'Alumno.Alumno(string, int, double, double)'"
 
+            Console.WriteLine($"Promedio de {alumno1.Nombre}: {alumno1.Promedio()}");
+            Console.WriteLine($"Promedio de {alumno2.Nombre}: {alumno2.Promedio()}");
+
+            Console.WriteLine($"¿{alumno1.Nombre} está aprobado? {alumno1.EstaAprobado()}");
+            Console.WriteLine($"¿{alumno2.Nombre} está aprobado? {alumno2.EstaAprobado()}");
+
+            alumno1.SubirNota();
+            Console.WriteLine($"Promedio de {alumno1.Nombre} después de subir las notas: {alumno1.Promedio()}");
+            alumno2.SubirNota();
+            Console.WriteLine($"Promedio de {alumno2.Nombre} después de subir las notas: {alumno2.Promedio()}");
+
         }
     }
 }
