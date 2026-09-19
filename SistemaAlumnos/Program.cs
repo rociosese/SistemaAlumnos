@@ -4,8 +4,19 @@
     {
         static void Main(string[] args)
         {
-            Alumno alumno1 = new Alumno("Maria Perez", 123, 6.5, 8.3);
-            Alumno alumno2 = new Alumno("Juan Gonzalez", 456, 9.7, 8.5);
+            Alumno alumno1 = new Alumno("Maria Perez", 123);
+            Alumno alumno2 = new Alumno("Juan Gonzalez", 456);
+
+
+            if (!alumno1.CargarNotas(6.5, 8.3))
+            {
+                Console.WriteLine("Las notas del alumno 1 son inválidas");
+            }
+
+            if (!alumno2.CargarNotas(9.7, 8.5))
+            {
+                Console.WriteLine("Las notas del alumno 2 son inválidas");
+            }
 
             Console.WriteLine($"Nombre: {alumno1.Nombre} - Legajo: {alumno1.Legajo}");
             Console.WriteLine($"Nombre: {alumno2.Nombre} - Legajo: {alumno2.Legajo}");
@@ -35,6 +46,8 @@
 
             Console.WriteLine(alumno1);
             Console.WriteLine(alumno2);
+
+            //alumno1.Nota1 = 5.5;
         }
     }
 }
