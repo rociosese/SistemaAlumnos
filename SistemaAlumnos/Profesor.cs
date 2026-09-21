@@ -9,5 +9,11 @@
         {
             Materia = materia;
         }
+
+        public override string Presentarse()
+        {
+            return $"Hola, soy {Nombre} y dicto {Materia}.";
+        }
+
     }
 }

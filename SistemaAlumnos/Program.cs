@@ -8,6 +8,22 @@
             Alumno alumno2 = new Alumno("Juan Gonzalez", 42222222, 456);
 
             Profesor profesor1 = new Profesor("Carlos Lopez", 30111111, "Programación");
+
+            Preceptor preceptor1 = new Preceptor("Laura Gomez", 30222222, "2° B");
+
+            List<Persona> personas = new List<Persona>();
+            personas.Add(alumno1);
+            personas.Add(alumno2);
+            personas.Add(profesor1);
+            personas.Add(preceptor1);
+
+            Console.WriteLine("\n--- PRESENTACIONES ---");
+           
+            foreach (Persona persona in personas)
+            {
+                Console.WriteLine(persona.Presentarse());
+            }
+
             Console.WriteLine($"Profesor: {profesor1.Nombre}");
             Console.WriteLine($"DNI: {profesor1.Documento}");
             Console.WriteLine($"Materia: {profesor1.Materia}");

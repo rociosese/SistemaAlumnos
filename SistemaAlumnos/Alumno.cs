@@ -30,6 +30,11 @@
         {
             return Promedio() >= 6;
         }
+
+        public override string Presentarse()
+        {
+            return $"Hola, soy {Nombre}, alumno con legajo {Legajo}";
+        }
         public void SubirNota()
 
         {
