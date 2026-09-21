@@ -4,8 +4,17 @@
     {
         static void Main(string[] args)
         {
-            Alumno alumno1 = new Alumno("Maria Perez", 123);
-            Alumno alumno2 = new Alumno("Juan Gonzalez", 456);
+            Alumno alumno1 = new Alumno("Maria Perez", 41111111, 123);
+            Alumno alumno2 = new Alumno("Juan Gonzalez", 42222222, 456);
+
+            Profesor profesor1 = new Profesor("Carlos Lopez", 30111111, "Programación");
+            Console.WriteLine($"Profesor: {profesor1.Nombre}");
+            Console.WriteLine($"DNI: {profesor1.Documento}");
+            Console.WriteLine($"Materia: {profesor1.Materia}");
+
+            Console.WriteLine($"Alumno: {alumno1.Nombre}");
+            Console.WriteLine($"DNI: {alumno1.Documento}");
+            Console.WriteLine($"Legajo: {alumno1.Legajo}");
 
 
             if (!alumno1.CargarNotas(6.5, 8.3))
@@ -48,10 +57,13 @@
                     Console.Write("Nombre: ");
                     string nombre = Console.ReadLine();
 
+                    Console.Write("DNI: ");
+                    int documento = int.Parse(Console.ReadLine());
+
                     Console.Write("Legajo: ");
                     int legajo = int.Parse(Console.ReadLine());
 
-                    Alumno nuevoAlumno = new Alumno(nombre, legajo);
+                    Alumno nuevoAlumno = new Alumno(nombre, documento, legajo);
 
                     Console.Write("Nota 1: ");
                     double nota1 = double.Parse(Console.ReadLine());

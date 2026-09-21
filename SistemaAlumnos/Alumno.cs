@@ -1,20 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SistemaAlumnos
+﻿namespace SistemaAlumnos
 {
-    public class Alumno
+    public class Alumno : Persona
     {
-        public string Nombre { get; set; }
         public int Legajo { get; private set; }
         public double Nota1 { get; private set; }
         public double Nota2 { get; private set; }
 
-        public Alumno(string nombre, int legajo)
-
+        public Alumno(string nombre, int documento, int legajo) : base(nombre, documento)
         {
-            Nombre = nombre;
             Legajo = legajo;
         }
 
@@ -22,7 +15,6 @@ namespace SistemaAlumnos
         {
             if (nota1 < 0 || nota1 > 10 || nota2 < 0 || nota2 > 10)
             { return false;  }
-
             Nota1 = nota1;
             Nota2 = nota2;
 
