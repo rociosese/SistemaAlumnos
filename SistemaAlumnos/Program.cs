@@ -7,9 +7,37 @@
             Alumno alumno1 = new Alumno("Maria Perez", 41111111, 123);
             Alumno alumno2 = new Alumno("Juan Gonzalez", 42222222, 456);
 
+            if (!alumno1.CargarNotas(6.5, 8.3))
+            {
+                Console.WriteLine("Las notas del alumno 1 son inválidas");
+            }
+
+            if (!alumno2.CargarNotas(9.7, 8.5))
+            {
+                Console.WriteLine("Las notas del alumno 2 son inválidas");
+            }
+
             Profesor profesor1 = new Profesor("Carlos Lopez", 30111111, "Programación");
 
             Preceptor preceptor1 = new Preceptor("Laura Gomez", 30222222, "2° B");
+
+            Materia materia1 = new Materia("PROG1", "Programación", 80);
+            Materia materia2 = new Materia("MAT1", "Matemática", 60);
+
+            List<IExportable> exportables = new List<IExportable>();
+
+            exportables.Add(alumno1);
+            exportables.Add(alumno2);
+            exportables.Add(profesor1);
+            exportables.Add(materia1);
+            exportables.Add(materia2);
+
+            Console.WriteLine("\n--- EXPORTACIÓN ---");
+
+            foreach (IExportable elemento in exportables)
+            {
+                Console.WriteLine(elemento.ExportarLinea());
+            }
 
             List<Persona> personas = new List<Persona>();
             personas.Add(alumno1);
@@ -32,16 +60,6 @@
             Console.WriteLine($"DNI: {alumno1.Documento}");
             Console.WriteLine($"Legajo: {alumno1.Legajo}");
 
-
-            if (!alumno1.CargarNotas(6.5, 8.3))
-            {
-                Console.WriteLine("Las notas del alumno 1 son inválidas");
-            }
-
-            if (!alumno2.CargarNotas(9.7, 8.5))
-            {
-                Console.WriteLine("Las notas del alumno 2 son inválidas");
-            }
 
             List<Alumno> alumnos = new List<Alumno>();
 
